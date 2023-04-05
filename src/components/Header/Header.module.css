@@ -1,0 +1,86 @@
+.brandBar{
+    background: #F5F5F5;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.brandBar__brandName{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+
+    /* DeepDarkColor */
+    color: #142023;
+    text-shadow: 0 3px 4px #00232A;
+}
+
+
+.navBar{
+    background: #F6F6F6;
+    /* RegularColor */
+    border: 1px solid #AEC1C5;
+    border-left: none;
+    border-right: none;
+
+}
+.navBar_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 45px;
+}
+
+.navBar__links{
+    display: flex;
+    flex-flow: row;
+
+}
+.navBar__item{
+    border-right: 1px solid rgba(65, 102, 110, 0.5);
+    padding: 0 10px;
+}
+
+.navBar__item:first-child{
+    padding-left: 0;
+}
+.navBar__item:last-child{
+    padding-right: 0;
+    border: none;
+}
+
+.navBar__btn{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #41666E;
+
+}
+
+.navBar__btn:hover, .navBar__btn:focus{
+    opacity: 0.75;
+    text-decoration: underline 1px;
+}
+
+.navBar__btn:active{
+    opacity: 0.5;
+
+}
+
+
+.navBar__item:last-child::after{
+    content: none;
+}
+
+.navBar__btn_enter{
+    text-transform: none;
+    margin-right: 10px;
+}
+.navBar__icon{
+    width: 30px;
+    height: 30px;
+}
