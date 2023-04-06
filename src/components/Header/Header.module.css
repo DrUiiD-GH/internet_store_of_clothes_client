@@ -24,7 +24,7 @@
     border: 1px solid #AEC1C5;
     border-left: none;
     border-right: none;
-
+    margin-bottom: 30px;
 }
 .navBar_wrap{
     display: flex;
@@ -61,7 +61,7 @@
 
 }
 
-.navBar__btn:hover, .navBar__btn:focus{
+.navBar__btn:hover{
     opacity: 0.75;
     text-decoration: underline 1px;
 }

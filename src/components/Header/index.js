@@ -1,14 +1,18 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import styles from './Header.module.css'
 import {Container} from "react-bootstrap";
 import {Context} from "../../index";
 import {useNavigate} from "react-router-dom";
 import {BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, MAIN_ROUTE} from "../../utils/consts";
 import {observer} from "mobx-react-lite";
+import AuthModal from "../modals/AuthModal/AuthModal";
+
+
 
 const Index = observer(() => {
     const {user} = useContext(Context)
     const navigate = useNavigate()
+    const [authVisible, setAuthVisible] = useState(false)
 
     return (
         <header>
@@ -52,7 +56,7 @@ const Index = observer(() => {
                             :
                             <ul className='rightBar'>
                                 <li className={styles.navBar__item}>
-                                    <button className={styles.navBar__btn} onClick={()=>user.setIsAuth(true)}>
+                                    <button className={styles.navBar__btn} onClick={()=>setAuthVisible(true)}>
                                         <span className={styles.navBar__btn_enter}>Войти</span>
                                         <img className={styles.navBar__icon} src='/icons/user.svg' alt='Аккаунт'/>
                                     </button>
@@ -62,6 +66,7 @@ const Index = observer(() => {
                     </div>
                 </Container>
             </div>
+            <AuthModal show={authVisible} onHide={() => setAuthVisible(false)}/>
         </header>
     );
 });

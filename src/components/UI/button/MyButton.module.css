@@ -1,0 +1,20 @@
+.myBtn{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+
+    color: #FFFFFF;
+
+    background: #41666E;
+    border-radius: 5px;
+
+    transition: all .3s;
+
+}
+.myBtn:hover, .myBtn:active{
+    background: #DD7676;
+}

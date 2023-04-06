@@ -1,0 +1,4 @@
+.itemsList{
+    display: flex;
+    flex-flow: wrap;
+}
