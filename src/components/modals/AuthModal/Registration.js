@@ -17,7 +17,7 @@ const Registration = ({nav}) => {
             <form className={styles.auth__form}>
                 <FormInput type={"text"} placeholder='Введите своё имя'/>
                 <FormInput type={"text"} placeholder='Введите свой email'/>
-                <FormInput type={"text"} placeholder='Телефон'/>
+                <FormInput type={"tel"} placeholder='Телефон'/>
                 <FormInput type={"password"}  placeholder='Придумайте пароль'/>
                 <FormInput type={"password"}  placeholder='Повторите пароль'/>
                 <span className={styles.auth__form_error}>Не верный пароль</span>

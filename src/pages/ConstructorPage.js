@@ -2,7 +2,7 @@ import React from 'react';
 
 const ConstructorPage = () => {
     return (
-        <div>
+        <div style={{minHeight:'900px'}}>
             ConstructorPage
         </div>
     );

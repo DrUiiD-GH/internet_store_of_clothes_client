@@ -1,12 +1,12 @@
 import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import CategoryBar from "../components/CategoryBar/CategoryBar";
-import CatalogProductsList from "../components/CatalogProductsList/CatalogProductsList";
+import CategoryBar from "../components/CatalogPageComponents/CategoryBar/CategoryBar";
+import CatalogProductsList from "../components/CatalogPageComponents/CatalogProductsList/CatalogProductsList";
 import {observer} from "mobx-react-lite";
 
 const CatalogPage = observer(() => {
     return (
-        <Container>
+        <Container style={{minHeight:'900px'}}>
            <Row>
                <Col mb={3}>
                    <CategoryBar/>

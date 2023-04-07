@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
 import styles from './CatalogProductsList.module.css'
-import {Context} from "../../index";
+import {Context} from "../../../index";
 import ProductItem from "../ProductItem/ProductItem";
 import {Row} from "react-bootstrap";
 

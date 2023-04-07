@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
 import styles from './CategoryBar.module.css'
-import {Context} from "../../index";
+import {Context} from "../../../index";
 
 const CategoryBar = observer(() => {
     const {category} = useContext(Context)
@@ -33,7 +33,7 @@ const CategoryBar = observer(() => {
                                     styles.category__item_arrow
                             }
                             onClick={() => openCategory(categoryItem.id)}
-                            src='/icons/select-arrow.svg'
+                            src='/img/icons/select-arrow.svg'
                             alt='>'
                         />
                     </div>

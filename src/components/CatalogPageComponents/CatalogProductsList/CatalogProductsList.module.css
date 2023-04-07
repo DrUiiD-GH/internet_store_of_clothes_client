@@ -1,5 +1,4 @@
 .productsList{
     display: flex;
-    flex-flow: wrap;
-
+    flex-wrap: wrap;
 }

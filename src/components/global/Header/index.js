@@ -1,11 +1,11 @@
 import React, {useContext, useState} from 'react';
 import styles from './Header.module.css'
 import {Container} from "react-bootstrap";
-import {Context} from "../../index";
+import {Context} from "../../../index";
 import {useNavigate} from "react-router-dom";
-import {BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, MAIN_ROUTE} from "../../utils/consts";
+import {BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, MAIN_ROUTE} from "../../../utils/consts";
 import {observer} from "mobx-react-lite";
-import AuthModal from "../modals/AuthModal/AuthModal";
+import AuthModal from "../../modals/AuthModal/AuthModal";
 
 
 
@@ -44,12 +44,12 @@ const Index = observer(() => {
                             <ul className={styles.navBar__links}>
                                 <li className={styles.navBar__item}>
                                     <button className={styles.navBar__btn} onClick={()=>navigate(BASKET_ROUTE)}>
-                                        <img className={styles.navBar__icon} src="/icons/basket.svg" alt='Корзина'/>
+                                        <img className={styles.navBar__icon} src="/img/icons/basket.svg" alt='Корзина'/>
                                     </button>
                                 </li>
                                 <li className={styles.navBar__item}>
                                     <button className={styles.navBar__btn} onClick={()=>user.setIsAuth(false)}>
-                                        <img className={styles.navBar__icon} src='/icons/user.svg' alt='Аккаунт'/>
+                                        <img className={styles.navBar__icon} src='/img/icons/user.svg' alt='Аккаунт'/>
                                     </button>
                                 </li>
                             </ul>
@@ -58,7 +58,7 @@ const Index = observer(() => {
                                 <li className={styles.navBar__item}>
                                     <button className={styles.navBar__btn} onClick={()=>setAuthVisible(true)}>
                                         <span className={styles.navBar__btn_enter}>Войти</span>
-                                        <img className={styles.navBar__icon} src='/icons/user.svg' alt='Аккаунт'/>
+                                        <img className={styles.navBar__icon} src='/img/icons/user.svg' alt='Аккаунт'/>
                                     </button>
                                 </li>
                             </ul>

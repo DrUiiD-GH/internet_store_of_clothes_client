@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainPage = () => {
     return (
-        <div>
+        <div style={{minHeight:'900px'}}>
             MainPage
         </div>
     );

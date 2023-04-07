@@ -2,7 +2,7 @@ import React from 'react';
 
 const AdminPage = () => {
     return (
-        <div>
+        <div style={{minHeight:'900px'}}>
             AdminPage
         </div>
     );
