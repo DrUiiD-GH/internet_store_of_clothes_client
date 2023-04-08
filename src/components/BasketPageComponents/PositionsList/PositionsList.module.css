@@ -1,0 +1,52 @@
+.list__wrap{
+    display: block;
+    margin-bottom: 100px;
+}
+
+.list__header{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.list__header_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+
+    margin-right: 30px;
+
+    letter-spacing: 0.05em;
+
+    color: #142023;
+}
+
+.list__header_subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 3px;
+
+    color: #142023;
+
+    opacity: 0.5;
+}
+
+.list__body{
+    margin-bottom: 20px;
+}
+.empty_tag{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+
+    margin-right: 30px;
+
+
+    color: #142023;
+}
+
+.list__footer{
+    display: flex;
+    justify-content: center;
+}

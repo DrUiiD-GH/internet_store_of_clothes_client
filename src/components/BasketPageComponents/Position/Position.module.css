@@ -1,0 +1,95 @@
+.position__wrap{
+    display: flex;
+    flex-direction: row;
+    border-bottom: #142023 solid 1px;
+    margin-bottom: 15px;
+
+
+    font-family: 'Roboto', sans-serif;
+    color: #142023;
+}
+
+.side{
+    padding: 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side_left{
+    padding: 0;
+    cursor: pointer ;
+}
+.side_center{
+
+}
+.side_right{
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.name{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.category{
+    font-weight: 400;
+    font-size: 18px;
+
+    color: #41666E;
+}
+.counter{
+    justify-self: end;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #AEC1C5;
+
+    width: 77px;
+    height: 24px;
+
+    padding: 5px;
+    margin-top: auto;
+}
+.counter_symbol{
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    transition: all .2s ease;
+    opacity: .5;
+
+}
+.counter_symbol:hover{
+    opacity: 1;
+}
+
+.counter_num{
+
+}
+
+
+
+
+
+.price{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.trash_btn{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+    opacity: .5;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.trash_btn:hover{
+    opacity: 1;
+}

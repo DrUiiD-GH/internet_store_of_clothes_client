@@ -7,14 +7,28 @@
     align-items: center;
     padding: 15px 40px;
 
-    color: #FFFFFF;
 
-    background: #41666E;
     border-radius: 5px;
 
     transition: all .3s;
 
 }
+
+.myBtn_reg{
+    color: #FFFFFF;
+    background: #41666E;
+}
+
+.myBtn_wh{
+    color: #142023;
+    background: #ffffff;
+    border: 1px solid #142023;
+}
+
 .myBtn:hover, .myBtn:active{
     background: #DD7676;
 }
+
+
+
+

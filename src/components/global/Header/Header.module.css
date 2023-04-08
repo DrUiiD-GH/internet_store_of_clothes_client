@@ -3,6 +3,7 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+
 }
 
 .brandBar__brandName{
@@ -20,11 +21,10 @@
 
 .navBar{
     background: #F6F6F6;
-    /* RegularColor */
     border: 1px solid #AEC1C5;
     border-left: none;
     border-right: none;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .navBar_wrap{
     display: flex;
