@@ -1,0 +1,128 @@
+.main_wrap{
+    font-family: 'Roboto', sans-serif;
+    color: #142023;
+    display: block;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.section__content{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.section__text{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+
+    display: inline-block;
+
+    letter-spacing: 0.075em;
+
+    padding: 15px;
+    color: #142023;
+
+    margin-bottom: 100px;
+
+    background: #EBF9FC;
+}
+
+.main__div{
+    height: 120px;
+    background: linear-gradient(98.77deg, #41666E 2.08%, #DD7676 99.5%);
+    margin-bottom: 100px;
+}
+
+.section_first{
+
+}
+
+.section_first__title{
+    font-weight: 700;
+    font-size: 40px;
+    color: #41666F;
+    margin-bottom: 45px;
+}
+
+.section_first__content{
+    height: 672px;
+    background: url("./static/firstsection_bg.jpg") no-repeat right;
+
+}
+
+.section_second{
+
+}
+
+.section_second__content{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section_second__slider{
+    display: flex;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    background: #41666E;
+    position: relative;
+
+    justify-content: center;
+}
+
+.slider__img{
+
+}
+.slider__selector{
+    position: absolute;
+    z-index: 99;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.slider__selector_dot{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background: #EBF9FC;
+    border-radius: 15px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.slider__selector_dot:hover{
+
+    transform: scale(1.2);
+
+
+}
+.active{
+    background: #DD7676;
+    opacity: 1;
+}
+
+
+.section_second__desc{
+    margin-left: 10px;
+
+}
+.section_second__text{
+    display: block;
+    text-align: right;
+    letter-spacing: 0.1em;
+    background: none;
+}
