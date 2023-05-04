@@ -1,0 +1,47 @@
+.position__wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 10px;
+}
+
+.position_shortImg{
+    width: 30%;
+}
+
+.position__middle{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+
+    color: #142023;
+
+}
+.position_subcat{
+    font-size: 18px;
+}
+.position_name{
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.position_price{
+    margin-top: auto;
+    font-size: 12px;
+}
+
+.position_close{
+    margin: auto 5px 5px auto;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.position_close:hover{
+    opacity: .7;
+}
