@@ -1,10 +1,35 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import styles from './AuthModal.module.css'
 import FormInput from "../../UI/input/FormInput";
 import MyButton from "../../UI/button/MyButton";
+import {login} from "../../../http/userAPI";
+import {observer} from "mobx-react-lite";
+import {Context} from "../../../index";
 
 
-const Login = ({nav}) => {
+
+const Login = observer(({nav, hideModal}) => {
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+    const [errSpan, setErrSpan] = useState()
+
+    const {user} = useContext(Context)
+
+
+    const onClickLogin = async ()=> {
+        try {
+            let data = await login(email, password)
+            user.setUser(data)
+            user.setIsAuth(true)
+            console.log(data)
+            hideModal()
+        }catch (e){
+            setErrSpan(e.response.data.message)
+        }
+
+
+    }
+
     return (
         <div className={styles.auth__wrap}>
             <div className={styles.auth__top}>
@@ -16,13 +41,23 @@ const Login = ({nav}) => {
                 </p>
             </div>
             <form className={styles.auth__form}>
-                <FormInput type={"text"} placeholder='Введите email'/>
-                <FormInput type={"password"}  placeholder='Введите пароль'/>
-                <span className={styles.auth__form_error}>Не верный пароль</span>
-                <MyButton type="button">Войти</MyButton>
+                <FormInput
+                    type={"text"}
+                    placeholder='Введите email'
+                    value={email}
+                    onChange={e=> setEmail(e.target.value)}
+                />
+                <FormInput
+                    type={"password"}
+                    placeholder='Введите пароль'
+                    value={password}
+                    onChange={e=> setPassword(e.target.value)}
+                />
+                <span className={styles.auth__form_error}>{errSpan}</span>
+                <MyButton type="button" onClick={onClickLogin}>Войти</MyButton>
             </form>
         </div>
     );
-};
+});
 
 export default Login;

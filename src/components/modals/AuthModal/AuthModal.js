@@ -20,7 +20,12 @@ const AuthModal = ({show, onHide}) => {
                 </div>
             </div>
             <div className={styles.authModal__wrap}>
-                {isLogin? <Login nav={()=>setIsLogin(false)}/>:<Registration nav={()=>setIsLogin(true)}/>}
+                {
+                    isLogin?
+                        <Login nav={()=>setIsLogin(false)} hideModal = {onHide}/>
+                        :
+                        <Registration nav={()=>setIsLogin(true)} hideModal = {onHide}/>
+                }
             </div>
         </Modal>
     );
