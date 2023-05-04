@@ -20,31 +20,8 @@ export default class ProductStore{
                     {id:'2', img:'/img/pic/card-prev.png'},
                     {id:'3', img:'/img/pic/card-prev.png'},
                     {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '4', name: 'Брюки деловые', price: '5000', subcategoryId: '3', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '5', name: 'Рубашка с рукавом', price: '2500', subcategoryId: '3', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '6', name: 'Футболка в полоску', price: '1300', subcategoryId: '1', img:[
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '7', name: 'Куртка лёгкая', price: '6100', subcategoryId: '5', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
                 ]}
+
         ]
         makeAutoObservable(this)
     }
