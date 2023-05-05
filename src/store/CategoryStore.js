@@ -2,14 +2,22 @@ import {makeAutoObservable} from "mobx";
 
 export default class CategoryStore{
     constructor() {
-        this._category = []
+        this._categories = []
+        this._types = [
+            {id:1, name:'торс верх'},
+            {id:2, name:'торс низ'},
+            {id:3, name:'ноги верх'},
+            {id:4, name:'ноги низ'},
+            {id:5, name:'стопы верх'},
+            {id:6, name:'стопы низ'}
+        ]
         this._selectedCategoryId = '1'
         this._selectedSubcategoryId = ''
         makeAutoObservable(this)
     }
 
     setCategories(categories){
-        this._category = categories
+        this._categories = categories
     }
 
     setSelectedCategoryId(categoryId){
@@ -20,7 +28,10 @@ export default class CategoryStore{
     }
 
     get categories(){
-        return this._category
+        return this._categories
+    }
+    get types(){
+        return this._types
     }
 
     get selectedCategoryId(){
