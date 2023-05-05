@@ -1,0 +1,41 @@
+.position__wrap{
+    margin-top: 15px;
+    padding: 0 15px;
+    border-bottom: solid rgba(0,0,0,0.5) 1px;
+}
+
+.position__number{
+    font-weight: 400;
+    font-size: 16px;
+    opacity: .5;
+    margin-bottom: 10px;
+}
+
+.position__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.position__row_status{
+    justify-content: flex-start;
+}
+
+.desc{
+    font-weight: 400;
+    font-size: 16px;
+}
+.desc_button{
+    text-decoration-line: underline;
+}
+
+.status_title{
+    font-weight: 300;
+    font-size: 18px;
+}
+.status_value{
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
