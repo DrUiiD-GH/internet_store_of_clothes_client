@@ -1,0 +1,36 @@
+.menu__wrap{
+    border-top: solid rgba(0, 0, 0, 0.5) 1px;
+}
+.menu__item{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+
+    color: rgba(0, 0, 0, 1);
+
+    padding: 10px;
+
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+.menu__item h3{
+    opacity: .5;
+    transition: .2s;
+}
+.menu__item:hover{
+    cursor: pointer;
+}
+.menu__item:hover h3{
+    opacity: 1;
+}
+.item_active{
+    border-width: 0 0 1px 1px;
+}
+.item_active h3{
+    opacity: 1
+}
+
+.item_exit{
+    color: #C50C0C;
+}

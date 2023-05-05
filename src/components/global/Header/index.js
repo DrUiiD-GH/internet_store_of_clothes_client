@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 import {Container} from "react-bootstrap";
 import {Context} from "../../../index";
 import {useNavigate} from "react-router-dom";
-import {BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, MAIN_ROUTE} from "../../../utils/consts";
+import {BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, MAIN_ROUTE, PROFILE_ROUTE} from "../../../utils/consts";
 import {observer} from "mobx-react-lite";
 import AuthModal from "../../modals/AuthModal/AuthModal";
 
@@ -48,7 +48,7 @@ const Index = observer(() => {
                                     </button>
                                 </li>
                                 <li className={styles.navBar__item}>
-                                    <button className={styles.navBar__btn} onClick={()=>user.setIsAuth(false)}>
+                                    <button className={styles.navBar__btn} onClick={()=>navigate(PROFILE_ROUTE)}>
                                         <img className={styles.navBar__icon} src='/img/icons/user.svg' alt='Аккаунт'/>
                                     </button>
                                 </li>

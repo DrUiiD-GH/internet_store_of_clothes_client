@@ -1,10 +1,19 @@
-import {ADMIN_ROUTE, BASKET_ROUTE, CATALOG_ROUTE, CONSTRUCTOR_ROUTE, ITEM_ROUTE, MAIN_ROUTE} from "./utils/consts";
+import {
+    ADMIN_ROUTE,
+    BASKET_ROUTE,
+    CATALOG_ROUTE,
+    CONSTRUCTOR_ROUTE,
+    ITEM_ROUTE,
+    MAIN_ROUTE,
+    PROFILE_ROUTE
+} from "./utils/consts";
 import BasketPage from "./pages/BasketPage";
 import AdminPage from "./pages/AdminPage";
 import MainPage from "./pages/MainPage";
 import CatalogPage from "./pages/CatalogPage";
 import ItemPage from "./pages/ItemPage";
 import ConstructorPage from "./pages/ConstructorPage";
+import ProfilePage from "./pages/ProfilePage";
 
 export const authRoutes = [
     {
@@ -14,6 +23,10 @@ export const authRoutes = [
     {
         path: BASKET_ROUTE,
         Component: BasketPage
+    },
+    {
+        path: PROFILE_ROUTE,
+        Component: ProfilePage
     }
 
 ]

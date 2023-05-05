@@ -27,6 +27,20 @@ const CreateSubcategory = observer(({show, onHide}) => {
                             )}
                         </Dropdown.Menu>
                     </Dropdown>
+
+                    <Dropdown className={'mt-2'}>
+                        <Dropdown.Toggle>Выбирите тип</Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            {category.types.map(type=>
+                                <Dropdown.Item
+                                    key={type.id}
+                                >
+                                    {type.name}
+                                </Dropdown.Item>
+                            )}
+                        </Dropdown.Menu>
+                    </Dropdown>
+
                     <Form.Control
                         placeholder={'Введите название подкатегории'}
                         className={'mt-3'}
