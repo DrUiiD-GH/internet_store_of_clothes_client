@@ -33,14 +33,13 @@ const ItemPage = () => {
         <Container style={{minHeight:'900px'}}>
             <Row>
                 <Col md={8}>
-                    <ImgOverview imgs={product.imgs === [] ?
+                    <ImgOverview imgs={product.imgs[0] ?
                         product.imgs
                         :
                         [{
                             id: '1',
                             src: ''
                         }]
-
                     }/>
                     <ItemDescription info={product.info} description={product.description}/>
                 </Col>
