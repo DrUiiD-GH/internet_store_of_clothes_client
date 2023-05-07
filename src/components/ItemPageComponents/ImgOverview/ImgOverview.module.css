@@ -14,16 +14,21 @@
 .selector__item{
     cursor: pointer;
     transition: .2s;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .selector__item:hover{
     transform: scale(1.05);
 }
 
 .selector__item_img{
-    width: 95px;
-    height: 95px;
-    background: #7A9BA1;
-    margin-bottom: 10px;
+    height: 100%;
+
 }
 .overview__current{
     width: 100%;

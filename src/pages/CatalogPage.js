@@ -4,15 +4,16 @@ import CategoryBar from "../components/CatalogPageComponents/CategoryBar/Categor
 import CatalogProductsList from "../components/CatalogPageComponents/CatalogProductsList/CatalogProductsList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
-import {getCategories, getProducts} from "../http/CatalogAPI";
+import {fetchCategories, fetchProducts} from "../http/CatalogAPI";
+
 
 
 const CatalogPage = observer(() => {
     const {category, product}= useContext(Context)
 
     useEffect(()=>{
-        getCategories().then(data=>category.setCategories(data))
-        getProducts().then(data=>product.setProducts(data.rows))
+        fetchCategories().then(data=>category.setCategories(data))
+        fetchProducts().then(data=>product.setProducts(data.rows))
     }, [])
 
     return (

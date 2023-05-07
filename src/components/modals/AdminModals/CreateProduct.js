@@ -72,7 +72,8 @@ const CreateProduct = ({show, onHide}) => {
                             }
                         </Dropdown.Menu>
                     </Dropdown>
-
+                    <Form.Label className='mt-2'>Цена товара</Form.Label>
+                    <Form.Control type='number'/>
                     <hr/>
 
                     <Form.Label>Описание товара</Form.Label>

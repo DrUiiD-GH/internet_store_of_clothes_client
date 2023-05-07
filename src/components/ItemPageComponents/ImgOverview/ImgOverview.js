@@ -1,24 +1,26 @@
 import React, {useState} from 'react';
 import styles from './ImgOverview.module.css'
-import {observer} from "mobx-react-lite";
 
-const ImgOverview = observer(() => {
 
-    const img = [
-        {id:1, img:'/img/pic/item-pic-1.png'},
-        {id:2, img:'/img/pic/item-pic-2.png'},
-        {id:3, img:'/img/pic/item-pic-3.png'},
-        {id:4, img:'/img/pic/item-pic-4.png'}
-    ]
+const ImgOverview = ({imgs}) => {
+    const [currentPic, setCurrentPic] = useState(imgs[0])
 
-    const [currentPic, setCurrentPic] = useState(img[0])
+
+
+    const renderImg = (src) =>{
+        if(src){
+            return process.env.REACT_APP_API_URL+'catalog/'+src
+        }else {
+            return '/img/pic/noImg.png'
+        }
+    }
 
 
     return (
         <div className={styles.overview__wrap}>
             <div className={styles.overview__selector}>
                 <ul className={styles.selector__list}>
-                    {img.map(pic =>
+                    {imgs.map(pic =>
                         <li
                             className={styles.selector__item}
                             key={pic.id}
@@ -27,18 +29,18 @@ const ImgOverview = observer(() => {
                             <img
                                 className={styles.selector__item_img}
                                 alt={pic.id}
-                                src={pic.img}
+                                src={renderImg(pic.src)}
                             />
                         </li>
                     )}
                 </ul>
             </div>
             <div className={styles.overview__current}>
-                <img className={styles.overview__current_img} alt='overview' src={currentPic.img}/>
+                <img className={styles.overview__current_img} alt={renderImg(currentPic.src)} src={renderImg(currentPic.src)}/>
             </div>
         </div>
     );
-});
+};
 
 
 export default ImgOverview;

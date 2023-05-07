@@ -1,7 +1,8 @@
 .position__wrap{
     margin-top: 15px;
-    padding: 0 15px;
-    border-bottom: solid rgba(0,0,0,0.5) 1px;
+    padding: 15px 15px;
+
+    border: solid rgba(0,0,0,0.5) 1px;
 }
 
 .position__number{
@@ -16,10 +17,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .position__row_status{
     justify-content: flex-start;
+    margin-bottom: 0;
 }
 
 .desc{

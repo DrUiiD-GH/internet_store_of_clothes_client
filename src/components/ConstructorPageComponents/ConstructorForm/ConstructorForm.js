@@ -6,8 +6,13 @@ import DressedPosition from "../DressedPosition/DressedPosition";
 const ConstructorForm = () => {
     return (
         <div className={styles.form__wrap}>
-            <div className={styles.form__image}>
-                <img className={styles.image__model} src='/img/constructor/model.png' alt='model'/>
+            <div className={styles.form__model}>
+                <img className={styles.model_img} src='/img/constructor/model.png' alt='model'/>
+                <img className={styles.dress_img} src='/img/constructor/catalog_8279.png' alt='dress'/>
+                <img className={styles.dress_img} src='/img/constructor/catalog_51074.png' alt='dress'/>
+
+                {/*<img className={styles.dress_img} src='/img/constructor/catalog_50483.png' alt='dress'/>*/}
+
             </div>
             <div className={styles.form__panel}>
                 <div className={styles.panel__top}>

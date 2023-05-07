@@ -36,6 +36,7 @@ const ProfileMenu = observer(({setChooseOrders, chooseOrders}) => {
                 className={styles.menu__item}
                 onClick={()=>{
                     user.setIsAuth(false)
+                    localStorage.removeItem('token')
                     navigate(MAIN_ROUTE)
                 }}
             >

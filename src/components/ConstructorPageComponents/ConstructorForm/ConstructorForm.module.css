@@ -6,7 +6,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.form__image{
+.form__model{
+    position: relative;
     background: #F2F2F0;
     width: 65%;
     min-height: 400px;
@@ -18,8 +19,13 @@
     padding: 30px;
 }
 
-.image__model{
+.model_img{
     height: 700px;
+}
+
+.dress_img{
+    top:0;
+    position: absolute;
 }
 
 
