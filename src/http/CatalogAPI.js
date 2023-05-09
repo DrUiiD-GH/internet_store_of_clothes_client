@@ -24,3 +24,8 @@ export const createSubcategory = async (subcategory)=>{
     const {data} = await $authHost.post('api/catalog/subcategories', subcategory)
     return data
 }
+
+export const creteProduct = async (product)=>{
+    const {data} = await $authHost.post('api/catalog/products', product)
+    return data
+}

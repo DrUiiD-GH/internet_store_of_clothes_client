@@ -24,7 +24,7 @@ const ItemDescription = ({info, description}) => {
                             </div>
                             <div className={styles.list__row_side}>
                                 <p className={styles.list__row_text}>
-                                    {row.text}
+                                    {row.description}
                                 </p>
                             </div>
                         </li>
