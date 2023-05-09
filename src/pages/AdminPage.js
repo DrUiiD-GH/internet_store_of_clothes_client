@@ -6,7 +6,7 @@ import CreateSubcategory from "../components/modals/AdminModals/CreateSubcategor
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 
-import {fetchCategories, fetchProducts} from "../http/CatalogAPI";
+import {fetchCategories, fetchProducts} from "../http/catalogAPI";
 
 
 const AdminPage = observer(() => {

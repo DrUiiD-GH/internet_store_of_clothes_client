@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {Button, Col, Dropdown, Form, Modal, Row} from "react-bootstrap";
 import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
-import {creteProduct} from "../../../http/CatalogAPI";
+import {creteProduct} from "../../../http/catalogAPI";
 
 
 

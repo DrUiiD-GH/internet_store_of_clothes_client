@@ -19,7 +19,7 @@ const Position = observer(({position}) => {
             </div>
             <div className={styles.side +' '+styles.side_center}>
                 <h4 className={styles.name}>{position.product.name}</h4>
-                <p className={styles.category}>{position.product.subcategoryName}</p>
+                <p className={styles.category}>{position.product.subcategory.name || 'ytn'}</p>
                 <div className={styles.counter}>
                     <img
                         alt='-'

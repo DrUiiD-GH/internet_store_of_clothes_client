@@ -7,6 +7,7 @@ import {useContext, useEffect, useState} from "react";
 import {Context} from "./index";
 import {check} from "./http/userAPI";
 import {Container, Spinner} from "react-bootstrap";
+import MySpinner from "./components/MySpinner";
 
 
 const App = observer(() =>{
@@ -24,7 +25,7 @@ const App = observer(() =>{
     },[])
 
     if(loading){
-        return <Container style={{height:900}} className="d-flex justify-content-center align-items-center"><Spinner animation={"grow"} className={'m-auto'}/></Container>
+        return <MySpinner/>
     }
 
     return (

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Button, Form, Modal} from "react-bootstrap";
-import {createCategory} from "../../../http/CatalogAPI";
+import {createCategory} from "../../../http/catalogAPI";
 import {Context} from "../../../index";
 
 const CreateCategory = ({show, onHide}) => {

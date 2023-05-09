@@ -4,7 +4,7 @@ import CategoryBar from "../components/CatalogPageComponents/CategoryBar/Categor
 import CatalogProductsList from "../components/CatalogPageComponents/CatalogProductsList/CatalogProductsList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
-import {fetchCategories, fetchProducts} from "../http/CatalogAPI";
+import {fetchCategories, fetchProducts} from "../http/catalogAPI";
 import Pages from "../components/CatalogPageComponents/Pages";
 
 
@@ -29,9 +29,9 @@ const CatalogPage = observer(() => {
                <Col mb={3}>
                    <CategoryBar/>
                </Col>
-               <Col md={9}>
+               <Col md={9} className={'d-flex justify-content-center flex-column'}>
                    <CatalogProductsList/>
-                   <Pages/>
+                   <Pages />
                </Col>
            </Row>
         </Container>

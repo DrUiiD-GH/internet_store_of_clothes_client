@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {Button, Dropdown, Form, Modal} from "react-bootstrap";
 import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
-import {createSubcategory} from "../../../http/CatalogAPI";
+import {createSubcategory} from "../../../http/catalogAPI";
 
 const CreateSubcategory = observer(({show, onHide}) => {
     const {category} = useContext(Context)

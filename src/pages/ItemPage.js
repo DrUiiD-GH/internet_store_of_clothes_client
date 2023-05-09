@@ -4,7 +4,7 @@ import ImgOverview from "../components/ItemPageComponents/ImgOverview/ImgOvervie
 import BuyCard from "../components/ItemPageComponents/BuyCard/BuyCard";
 import ItemDescription from "../components/ItemPageComponents/ItemDescription/ItemDescription";
 import {useParams} from "react-router-dom";
-import {fetchOneProduct} from "../http/CatalogAPI";
+import {fetchOneProduct} from "../http/catalogAPI";
 import {observer} from "mobx-react-lite";
 
 const ItemPage = () => {
@@ -44,7 +44,7 @@ const ItemPage = () => {
                     <ItemDescription info={product.info} description={product.description}/>
                 </Col>
                 <Col md={4} style={{position:"relative"}}>
-                    <BuyCard product={product}/>
+                    <BuyCard product={product} productId={id}/>
                 </Col>
             </Row>
         </Container>
