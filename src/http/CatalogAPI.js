@@ -1,4 +1,4 @@
-import {$host} from "./index";
+import {$authHost, $host} from "./index";
 
 export const fetchCategories = async ()=>{
     const {data} = await $host.get('api/catalog/subcategories')
@@ -12,5 +12,15 @@ export const fetchProducts = async ()=>{
 
 export const fetchOneProduct = async (id)=>{
     const {data} = await $host.get('api/catalog/products/' + id)
+    return data
+}
+
+export const createCategory = async (category)=>{
+    const {data} = await $authHost.post('api/catalog/categories', category)
+    return data
+}
+
+export const createSubcategory = async (subcategory)=>{
+    const {data} = await $authHost.post('api/catalog/subcategories', subcategory)
     return data
 }

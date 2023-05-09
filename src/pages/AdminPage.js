@@ -1,14 +1,24 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Button, Container} from "react-bootstrap";
 import CreateProduct from "../components/modals/AdminModals/CreateProduct";
 import CreateCategory from "../components/modals/AdminModals/CreateCategory";
 import CreateSubcategory from "../components/modals/AdminModals/CreateSubcategory";
+import {observer} from "mobx-react-lite";
+import {Context} from "../index";
+
+import {fetchCategories, fetchProducts} from "../http/CatalogAPI";
 
 
-const AdminPage = () => {
+const AdminPage = observer(() => {
     const [catVis, setCatVis] = useState(false)
     const [subcatVis, setSubcatVis] = useState(false)
     const [proVis, setProVis] = useState(false)
+
+    const {category}= useContext(Context)
+
+    useEffect(()=>{
+        fetchCategories().then(data=>category.setCategories(data))
+    }, [])
 
 
     return (
@@ -21,6 +31,6 @@ const AdminPage = () => {
             <CreateProduct show={proVis} onHide={()=>setProVis(false)}/>
         </Container>
     );
-};
+});
 
 export default AdminPage;
