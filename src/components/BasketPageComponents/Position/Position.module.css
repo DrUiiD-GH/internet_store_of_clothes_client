@@ -20,6 +20,10 @@
     padding: 0;
     cursor: pointer ;
 }
+.previewImg{
+    max-height: 100%;
+}
+
 .side_center{
 
 }

@@ -4,6 +4,7 @@ import {observer} from "mobx-react-lite";
 import {Context} from "../../../index";
 import Position from "../Position/Position";
 import MyButtonWhite from "../../UI/button/MyButtonWhite";
+import {deleteBasket} from "../../../http/basketApi";
 
 const PositionsList = observer(() => {
     const {basket} = useContext(Context)
@@ -21,6 +22,10 @@ const PositionsList = observer(() => {
         return tCount+' товаров'
     }
 
+    const clearBasket=()=>{
+        deleteBasket().then(data=>basket.setBasket(data))
+    }
+
     return (
         <div className={styles.list__wrap}>
             <div className={styles.list__header}>
@@ -33,7 +38,13 @@ const PositionsList = observer(() => {
                 }
             </div>
             <div className={styles.list__footer}>
-                <MyButtonWhite>Очистить корзину</MyButtonWhite>
+                {
+                    product_baskets[0]?
+                        <MyButtonWhite onClick={clearBasket}>Очистить корзину</MyButtonWhite>
+                        :
+                        <div/>
+                }
+
             </div>
         </div>
     );

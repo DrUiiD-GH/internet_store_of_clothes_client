@@ -6,5 +6,17 @@ export const fetchBasket = async ()=>{
 }
 
 export const putInBasket = async (product)=>{
-    const {data} = await $authHost.post('api/basket', product)
+    await $authHost.post('api/basket', product)
 }
+
+export const updateBasket = async (product)=>{
+    const {data} = await $authHost.put('api/basket', product)
+    return data
+}
+
+
+export const deleteBasket = async ()=>{
+    const {data} = await $authHost.delete('api/basket')
+    return data
+}
+
