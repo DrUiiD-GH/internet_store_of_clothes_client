@@ -4,14 +4,16 @@ import styles from './CategoryBar.module.css'
 import {Context} from "../../../index";
 
 const CategoryBar = observer(() => {
-    const {category} = useContext(Context)
+    const {category, product} = useContext(Context)
 
     const openCategory = (categoryId) => {
         category.setSelectedCategoryId(categoryId)
+        product.setPage(1)
     }
     const chooseCategory = (categoryId)=>{
         openCategory(categoryId)
         category.setSelectedSubcategoryId('')
+        product.setPage(1)
     }
 
     return (

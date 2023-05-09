@@ -2,34 +2,37 @@ import {makeAutoObservable} from "mobx";
 
 export default class ProductStore{
     constructor() {
-        this._products = [
-            {id: '1', name: 'Носки тёплые', price: '700', subcategoryId: '8', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '2', name: 'Трусы чёрные', price: '650', subcategoryId: '7', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]},
-            {id: '3', name: 'Футболка чистая', price: '1400', subcategoryId: '2', img: [
-                    {id:'1', img:'/img/pic/card-prev.png'},
-                    {id:'2', img:'/img/pic/card-prev.png'},
-                    {id:'3', img:'/img/pic/card-prev.png'},
-                    {id:'4', img:'/img/pic/card-prev.png'}
-                ]}
-
-        ]
+        this._products = []
+        this._page=1
+        this._totalCount=0
+        this._limit=12
         makeAutoObservable(this)
     }
 
     setProducts(products){
         this._products = products
     }
+    setPage(page){
+        this._page=page
+    }
+    setTotalCount(totalCount){
+        this._totalCount=totalCount
+    }
+    setLimit(limit){
+        this._limit=limit
+    }
+
+
     get products(){
         return this._products
+    }
+    get page(){
+        return this._page
+    }
+    get totalCount(){
+        return this._totalCount
+    }
+    get limit(){
+        return this._limit
     }
 }

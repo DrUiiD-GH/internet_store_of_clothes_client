@@ -5,6 +5,7 @@ import CatalogProductsList from "../components/CatalogPageComponents/CatalogProd
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 import {fetchCategories, fetchProducts} from "../http/CatalogAPI";
+import Pages from "../components/CatalogPageComponents/Pages";
 
 
 
@@ -13,8 +14,14 @@ const CatalogPage = observer(() => {
 
     useEffect(()=>{
         fetchCategories().then(data=>category.setCategories(data))
-        fetchProducts().then(data=>product.setProducts(data.rows))
     }, [])
+
+    useEffect(()=>{
+        fetchProducts(category.selectedCategoryId, category.selectedSubcategoryId, product.page, 12).then(data=>{
+            product.setProducts(data.rows)
+            product.setTotalCount(data.count)
+        })
+    }, [product.page, category.selectedCategoryId, category.selectedSubcategoryId])
 
     return (
         <Container style={{minHeight:'900px'}}>
@@ -23,7 +30,8 @@ const CatalogPage = observer(() => {
                    <CategoryBar/>
                </Col>
                <Col md={9}>
-                    <CatalogProductsList/>
+                   <CatalogProductsList/>
+                   <Pages/>
                </Col>
            </Row>
         </Container>

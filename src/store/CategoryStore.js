@@ -11,7 +11,7 @@ export default class CategoryStore{
             {id:5, name:'стопы верх'},
             {id:6, name:'стопы низ'}
         ]
-        this._selectedCategoryId = '1'
+        this._selectedCategoryId = ''
         this._selectedSubcategoryId = ''
         makeAutoObservable(this)
     }
