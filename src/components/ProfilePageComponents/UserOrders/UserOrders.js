@@ -1,29 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './UserOrders.module.css'
 import OrderPosition from "./OrderPosition/OrderPosition";
+import {cancelOrderById, fetchOrders} from "../../../http/ordersApi";
 
 const UserOrders = () => {
-    const orders = [
+    const [orders, setOrders] = useState([
         {
-            id:45,
-            count:4,
-            total_cost:'13000',
-            status:'Ожидает отправки'
-        },
-        {
-            id:547,
-            count:2,
-            total_cost:'4800',
-            status:'Создан'
+            id:'',
+            count:'',
+            total_cost:'',
+            status:'Получение данных с сервера'
         }
-    ]
+    ])
+
+    const cancelOrder = (orderId)=>{
+        console.log(orderId)
+        cancelOrderById({orderId}).then(data=>setOrders(data))
+    }
+
+    useEffect(()=>{
+        fetchOrders().then(data=>setOrders(data))
+    }, [])
 
     return (
         <div className={styles.orders__wrap}>
             <h2 className={styles.orders__title}>Мои заказы</h2>
             {
                 orders.map(position=>
-                    <OrderPosition position = {position} key={position.id}/>
+                    <OrderPosition position={position} key={position.id} onClickCancel={()=>cancelOrder(position.id)}/>
                 )
             }
         </div>
