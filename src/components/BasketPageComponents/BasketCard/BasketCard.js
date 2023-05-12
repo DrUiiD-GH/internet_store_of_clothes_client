@@ -4,6 +4,8 @@ import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
 import FormInput from "../../UI/input/FormInput";
 import MyButton from "../../UI/button/MyButton";
+import {addOrder} from "../../../http/ordersApi";
+import {deleteBasket} from "../../../http/basketApi";
 
 const BasketCard = observer(() => {
     const {basket} = useContext(Context)
@@ -13,11 +15,19 @@ const BasketCard = observer(() => {
         basket.basket.product_baskets.map(position=>
             tCount+=position.count
         )
-
         if(tCount < 1) return 'Нет товаров'
         if(tCount === 1) return tCount+' товар на сумму'
         if(tCount < 5) return tCount+' товара на сумму'
         return tCount+' товаров на сумму'
+    }
+
+    const onClickCreateOrder = ()=>{
+        addOrder().then(data=>{
+            deleteBasket().then(data=>{
+                basket.setBasket(data)
+                alert('Заказ создан')
+            })
+        })
     }
 
     return (
@@ -42,7 +52,7 @@ const BasketCard = observer(() => {
                     <span>{basket.basket.total_cost} ₽</span>
                 </div>
                 <span className={styles.footer_description}>Без учета возможной стоимости доставки</span>
-                <MyButton>Оформить заказ</MyButton>
+                <MyButton onClick={onClickCreateOrder}>Оформить заказ</MyButton>
             </div>
         </div>
     );

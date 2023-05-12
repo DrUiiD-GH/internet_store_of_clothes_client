@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './OrderPosition.module.css'
 
-const OrderPosition = ({position, onClickCancel, onClickViewOrder
-                           , ...props}) => {
+const OrderPosition = ({position, onClickCancel, onClickViewOrder, ...props}) => {
     return (
         <div className={styles.position__wrap}>
             <h4 className={styles.position__number}>

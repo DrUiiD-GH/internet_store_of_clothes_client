@@ -2,7 +2,7 @@
     margin-top: 15px;
     padding: 15px 15px;
 
-    border: solid rgba(0,0,0,0.5) 1px;
+    border: solid #AEC1C5 1px;
 }
 
 .position__number{
@@ -34,6 +34,8 @@
 
 .status_btn{
     margin-left: auto;
+    font-size: 12px;
+    opacity: 0.6;
 }
 
 .status_title{

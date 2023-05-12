@@ -1,0 +1,41 @@
+.changeModal__header{
+    font-family: 'Roboto', sans-serif;
+}
+
+.changeModal__wrap{
+    padding: 15px 30px;
+}
+
+.changeModal_placeholder{
+    width: 100%;
+}
+
+.changeModal_error{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0 10px 30px 10px;
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.changeModal_btn{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.addressForm__row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.addressForm_title{
+    width: 25%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+.addressForm_input{
+    width: 75%;
+}

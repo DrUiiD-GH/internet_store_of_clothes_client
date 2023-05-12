@@ -12,7 +12,7 @@ const Registration = ({nav, hideModal}) => {
     const [password, setPassword] = useState()
     const [secPassword, setSecPassword] = useState()
 
-    const [errSpan, setErrSpan] = useState()
+    const [errSpan, setErrSpan] = useState('')
 
     const {user} = useContext(Context)
 
@@ -24,12 +24,12 @@ const Registration = ({nav, hideModal}) => {
                 let data = await registration(email, password)
                 user.setUser(data)
                 user.setIsAuth(true)
-                console.log(data)
                 hideModal()
             }
 
         }catch (e){
-            setErrSpan(e.response.data.message)
+            if(e.response.data.message) setErrSpan(e.response.data.message)
+            if(e.response.data[0]) setErrSpan(e.response.data[0].msg)
         }
 
     }

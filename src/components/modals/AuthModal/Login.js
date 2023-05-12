@@ -21,10 +21,10 @@ const Login = observer(({nav, hideModal}) => {
             let data = await login(email, password)
             user.setUser(data)
             user.setIsAuth(true)
-            console.log(data)
             hideModal()
         }catch (e){
-            setErrSpan(e.response.data.message)
+            if(e.response.data.message) setErrSpan(e.response.data.message)
+            if(e.response.data[0]) setErrSpan(e.response.data[0].msg)
         }
 
 

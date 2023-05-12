@@ -1,13 +1,15 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styles from './ProfileMenu.module.css'
 import {observer} from "mobx-react-lite";
 import {Context} from "../../../index";
 import {useNavigate} from "react-router-dom";
 import {MAIN_ROUTE} from "../../../utils/consts";
+import {getUserInfo} from "../../../http/userAPI";
 
 const ProfileMenu = observer(({setChooseOrders, chooseOrders}) => {
     const {user} = useContext(Context)
     const navigate = useNavigate()
+
     return (
         <div className={styles.menu__wrap}>
             <div
