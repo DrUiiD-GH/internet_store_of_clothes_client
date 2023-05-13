@@ -8,6 +8,7 @@ import {Context} from "../../../index";
 import ChangeEmail from "../../modals/InfoModals/ChangeEmail";
 import ChangePhone from "../../modals/InfoModals/ChangePhone";
 import ChangeAddress from "../../modals/InfoModals/ChangeAddress";
+import ChangePassword from "../../modals/InfoModals/ChangePassword";
 
 const UserInfo = observer(() => {
     const {user} = useContext(Context)
@@ -16,6 +17,7 @@ const UserInfo = observer(() => {
     const [emailModalVis, setEmailModalVis] = useState(false)
     const [phoneModalVis, setPhoneModalVis] = useState(false)
     const [addressModalVis, setAddressModalVis] = useState(false)
+    const [passwordModalVis, setPasswordModalVis] = useState(false)
 
     useEffect(()=>{
         getUserInfo().then(data=>user.setUserInfo(data))
@@ -104,7 +106,10 @@ const UserInfo = observer(() => {
                 </div>
             </div>
 
-            <button className={styles.btn_changePas}>
+            <button
+                className={styles.btn_changePas}
+                onClick={()=>setPasswordModalVis(true)}
+            >
                 Изменить пароль
             </button>
 
@@ -112,6 +117,7 @@ const UserInfo = observer(() => {
             <ChangeEmail show={emailModalVis} onHide={()=>setEmailModalVis(false)}/>
             <ChangePhone show={phoneModalVis} onHide={()=>setPhoneModalVis(false)}/>
             <ChangeAddress show={addressModalVis} onHide={()=>setAddressModalVis(false)}/>
+            <ChangePassword show={passwordModalVis} onHide={()=>setPasswordModalVis(false)}/>
         </div>
     );
 });

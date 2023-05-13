@@ -5,6 +5,13 @@ export const fetchOrders = async ()=>{
     return data
 }
 
+export const fetchOneOrder = async (orderId)=>{
+    const {data} = await $authHost.get('api/orders/'+orderId)
+    return data
+}
+
+
+
 export const cancelOrderById = async (order)=>{
     const {data} = await $authHost.delete('api/orders', {data:order})
     return data

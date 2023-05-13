@@ -24,17 +24,12 @@ const ChangeAddress = ({show, onHide}) => {
             if(addressCity&&addressStreet&&addressHouse&&addressApartment){
                 const address = `г. ${addressCity}, ул. ${addressStreet}, д. ${addressHouse}, кв. ${addressApartment}`
                 const data = await changeAddress(address)
-                console.log(address)
                 user.setUserInfo(data)
                 setError('')
                 onHide()
             }else {
                 setError('Заполните все поля')
             }
-
-
-
-
         }catch (e){
             if(e.response.data.message) setError(e.response.data.message)
             if(e.response.data[0]) setError(e.response.data[0].msg)
