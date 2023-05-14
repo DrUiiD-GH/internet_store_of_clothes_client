@@ -7,6 +7,7 @@ import UserStore from "./store/UserStore";
 import CategoryStore from "./store/CategoryStore";
 import ProductStore from "./store/ProductStore";
 import BasketStore from "./store/BasketStore";
+import ConstructorStore from "./store/ConstructorStore";
 
 
 export const Context = createContext(null)
@@ -17,7 +18,8 @@ root.render(
         user: new UserStore(),
         category: new CategoryStore(),
         product: new ProductStore(),
-        basket:new BasketStore()
+        basket:new BasketStore(),
+        constructor:new ConstructorStore()
     }}>
         <App/>
     </Context.Provider>

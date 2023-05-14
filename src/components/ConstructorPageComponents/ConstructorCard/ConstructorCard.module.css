@@ -9,18 +9,27 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-
-
     color: #142023;
+}
+.card__imgBtn{
+    position: relative;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    overflow: hidden;
 }
 .card_img{
     width: 100%;
-    height: 170px;
-    background: #EBF9FC;
-    margin-bottom: 5px;
+
+
 }
 .card_name{
     margin-bottom: 10px;
+    opacity: .80;
+    text-align: center;
 }
 
 .card__bottom{
@@ -46,17 +55,18 @@
 .btn{
     width: 20px;
     height: 20px;
-    opacity: .7;
-    cursor: pointer;
+    opacity: .75;
+    padding: 0;
+    margin: 0;
 }
-
+.bnt_img{
+    width: 20px;
+    height: 20px;
+}
 .btn:hover{
     opacity: 1;
     transform: scale(1.05);
 }
-
-
-
 
 
 .card:hover .card__bottom{
@@ -64,3 +74,25 @@
 
 
 }
+.card:hover .card_name{
+    opacity: 1;
+}
+
+
+.card__disable_overview{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    top:0
+}
+.card__disable_overview span{
+    font-size: 18px;
+    font-weight: 500;
+    color: #91e7ff;
+}
+

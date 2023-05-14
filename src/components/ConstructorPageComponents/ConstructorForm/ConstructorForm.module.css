@@ -18,6 +18,15 @@
 
     padding: 30px;
 }
+.form__model:after{
+    position: absolute;
+    content: '';
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #AEC1C5;
+    opacity: 0;
+}
 
 .model_img{
     height: 700px;
